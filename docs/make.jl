@@ -11,7 +11,7 @@ makedocs(
 )
 
 deploydocs(
-   repo="https://github.com/ai4energy/Ai4EDocs.git";
+   repo="https://github.com/ai4energy/Ai4ELab.git";
    push_preview=true
 #    target = "../build",
 )
