@@ -5,8 +5,18 @@ format = Documenter.HTML(assets = ["assets/css/ai4e.css"])
 makedocs(
     sitename="Ai4ELab",
     pages=[
-        "Home" => "index.md"
+        "Home" => "index.md",
+        "Tutorials" => [
+            "tutorials/quickstart.md",
+            "tutorials/webdesign.md",
+            "tutorials/styleAndRules.md"
+        ],
+        "Apps" => [
+            "labs/TestLab.md",
+            "labs/HeatLab.md"
+        ]
     ],
+    
     format=format,
 )
 
