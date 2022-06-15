@@ -33,7 +33,7 @@ contourPlot(z, n=10, L=0.2) = PlotData(
 )
 
 
-function compute_data(ic_model::HeatPages)
+function compute_data(ic_model::MyPage)
     T0 = ic_model.T0[]
     Tout = ic_model.Tout[]
     timefield = ic_model.timefield[]
@@ -51,7 +51,7 @@ function compute_data(ic_model::HeatPages)
 end
 
 
-function ui(model::HeatPages)
+function ui(model::MyPage)
 
     onany(model.value) do (_...)
         model.click[] += 1
