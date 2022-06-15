@@ -6,7 +6,7 @@ using Stipple, StipplePlotly, StippleUI
     value::R{Int} = 0
     click::R{Int} = 0
 
-    features::R{Vector{Symbol}} = [:_sin, :cos, :log, :tanh]
+    features::R{Vector{Symbol}} = [:sin, :cos, :log, :tanh]
     f_left::R{Symbol} = :sin
     f_right::R{Symbol} = :sin
 
@@ -26,7 +26,7 @@ pd(f, para, xlim, name) = PlotData(
 )
 
 
-function compute_data(ic_model::TestPages)
+function compute_data(ic_model::MyPage)
     f_left = isequal(ic_model.f_left[], nothing) ? sin : eval(ic_model.f_left[])
     f_right = isequal(ic_model.f_right[], nothing) ? sin : eval(ic_model.f_right[])
     xlim = ic_model.x_limit[]
@@ -39,7 +39,7 @@ function compute_data(ic_model::TestPages)
 end
 
 
-function ui(model::TestPages)
+function ui(model::MyPage)
 
     onany(model.value) do (_...)
         model.click[] += 1

@@ -70,13 +70,13 @@ XXX为项目文件名，如`TestLab`与`HeatLab`。
 
 关于StippleUI。在例子里只用了滑杆(slider)与选择框(select)，还有很多有意思的UI组件在文档API中。大家可以自行查看。
 
-关于StipplePlotly。画图时，支持各种图。Web画图主要是用PlotlyJS，StipplePlotly作为中间层，最终会把前面提到的`PlotData`的内容生成对应的CSS与JS文件。那么可以说，最终的目的是画PlotlyJS的图。所以有些API的去[PlotlyJS的官方文档](https://plotly.com/julia/)找，例如HeatLab中`PlotData`里的
+关于StipplePlotly。画图时，支持各种图。Web画图主要是用PlotlyJS，StipplePlotly作为中间层，最终会把前面提到的`PlotData`的内容生成对应的CSS与JS文件。那么可以说，最终的目的是画PlotlyJS的图。所以有些API需要去[PlotlyJS的官方文档](https://plotly.com/julia/)找，例如HeatLab中`PlotData`里的
 
 ```julia
 contours=Dict("start" => 0, "end" => 1000)
 ```
 
-只有看官方文档才能写出来的。记住：`PlotData`是中间层，`PlotlyJS`是最终目的。
+只有看官方文档才能写出来的。记住：`PlotData`是中间层，用来储存信息。`PlotlyJS`是最终目的。
 
 ## App介绍文档
 
