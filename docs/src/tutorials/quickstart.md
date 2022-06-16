@@ -9,8 +9,7 @@
 ```powershell
 TestLab/
 ├── lib/
-│   ├── MyApp.jl
-│   └── TestLab.jl
+│   └── MyApp.jl
 ├── public/
 │   └── favicon.ico
 ├── Dockerfile
@@ -49,7 +48,9 @@ TestLab/
 
 ### Step2
 
-Step2的具体步骤如下：
+Step2的具体步骤如下，**有两种方法**：
+
+#### 方法1
 
 ```julia
 TestLab> julia #进入Julia
@@ -64,7 +65,8 @@ julia> include("run.jl") #开启服务器
 * `instantiate`是实例化环境的意思，就是在当前环境下把`Project.toml`中的包以及他们的包部署到位。
 
 !!! tip
-    上述过程中，按下`Tab`键可以自动补全代码
+    上述过程中，按下`Tab`键可以自动补全代码。
+    同时，上述步骤中有多此一举的做法，这个留给大家自己去思考发现
 
 示意图如下：
 
@@ -73,6 +75,20 @@ julia> include("run.jl") #开启服务器
 最后就启动了服务器了，按下`Ctrl`键点击http链接，就能在网页中看到了本地运行的Web程序了！（Warning可以不用管）
 
 ![图 1](../assets/quickstart-09-01.png)
+
+#### 方法2
+
+方法二很简单，在Step1的基础上：
+
+1. 确认是否在App项目文件夹
+2. 打开run.jl文件
+3. 点箭头运行
+
+如图所示：
+
+![图 2](../assets/quickstart-11-39-21.png)  
+
+### 关闭服务器
 
 如果需要关闭服务器，那么输入：
 

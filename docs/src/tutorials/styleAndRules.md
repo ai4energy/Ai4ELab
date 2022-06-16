@@ -2,21 +2,25 @@
 
 ## 开发环境
 
-把环境建立在当前文件夹，即
+!!! warning
+    开发环境可以建立在`tests/`或其他文件夹中。尝试`labs/`中例子也不要对里面的项目直接修改。最好把它复制出来，`tests/`或其他文件夹中。规避无法撤回的风险。
 
-```julia
-TestLab> julia #进入Julia
-julia> #按下 ] 键进入包模式
-(@v1.x) pkg> activate .
-```
+1. 建立Julia环境的方法是创建`Project.toml`文件
+2. 把Julia环境切换到当前文件夹，即
 
-这样，环境就切过来了。如果使用`add`，那么在`Project.toml`文件中自动生成`[deps]`。所以这个文件中的`[deps]`，不用自己写。
+    ```julia
+    TestLab> julia #进入Julia
+    julia> #按下 ] 键进入包模式
+    (@v1.x) pkg> activate .
+    ```
 
-```julia
-(TestLab) pkg> instantiate
-```
+    **或者按照[Quick Start中的方法2](./quickstart.md#方法2)，直接通过VScode运行也可以。**
+3. 若要添加依赖包，使用`add`，那么在`Project.toml`文件中自动生成`[deps]`。所以这个文件中的`[deps]`，不用自己写。
+4. `instantiate`实际上就是根据`Project.toml`的内容把相应的包拉取到当前环境。`Manifest.toml`是在实例化环境时生成的。[Quick Start中的方法2](./quickstart.md#方法2)把上述过程写在了Julia脚本中，自动完成。
 
-`instantiate`实际上就是根据`Project.toml`的内容把相应的包拉取到当前环境。`Manifest.toml`是在实例化环境时生成的。
+    ```julia
+    (TestLab) pkg> instantiate
+    ```
 
 需要自己写的是`[compat]`，这是**兼容**的意思。就是说明你的环境用的包版本是多少，为了避免因为包版本更新而产生错误。在包模式下输入`status`可以查看包版本。在本地App设计调试完成以后，把版本兼容手动写上去即可。
 
@@ -29,9 +33,9 @@ julia> #按下 ] 键进入包模式
 
 ```powershell
 XXX/
+TestLab/
 ├── lib/
-│   ├── MyApp.jl
-│   └── Page.jl
+│   └── MyApp.jl
 ├── public/
 │   └── favicon.ico
 ├── Dockerfile
@@ -51,7 +55,7 @@ XXX为项目文件名，如`TestLab`与`HeatLab`。
 
 ### 快速上手版
 
-**仅修改**`lib/Page.jl`中函数`ui`与结构体`MyPage`**里面**的内容，这二者名字也不改动。
+**仅修改**`lib/MyApp.jl`中函数`ui`与结构体`MyPage`**里面**的内容，这二者名字也不改动。
 
 其他计算函数如`compute_data`、`pd`等按需修改。
 
@@ -60,9 +64,9 @@ XXX为项目文件名，如`TestLab`与`HeatLab`。
 唯一的要求：能用Docker部署。🤣🤣🤣
 
 !!! warning
-    `MyApp.jl`中使用了`Page.jl`中的`MyPage`结构体与`ui`函数，进行初始化并模块化封装。这是为了适配`Revise.jl`。模块化的目的就是为了实时同步代码更新。即网页运行时，直接修改代码，浏览器刷新一下就能看到代码刷新后页面的效果。但是如果修改了`MyPage`结构体，这个时候大概率还是得先`down()`再重新启动一下，这和页面渲染有关。如果碰到了问题，解决不了。就用那个经典的方法——重开Julia。🤣🤣🤣
-    `run.jl`使用了`MyApp.jl`中的htmlfile。
-    `run.jl`，`Page.jl`，`MyApp.jl`中的内容都相关联，如果改动了，需要做对应的关联，否则报错。
+    `MyApp.jl`中使用了`MyApp`模块中的`MyPage`结构体与`ui`函数。模块化封装的作用是为了可以重定义`MyPage`。这是为了适配`Revise.jl`，目的就是为了实时同步代码更新。即网页运行时，直接修改代码，浏览器刷新一下就能看到代码刷新后页面的效果。但是如果修改了`MyPage`结构体，这个时候大概率还是得先`down()`再重新启动一下，这和页面渲染有关。如果碰到了问题，解决不了。就用那个经典的方法——重开Julia。🤣🤣🤣
+
+    `run.jl`，`MyApp.jl`中的内容相关联，如果改动了`MyApp.jl`中的模块名和结构体名，需要做对应的关联，否则报错。
 
 ## StippleUI与StipplePlotly
 

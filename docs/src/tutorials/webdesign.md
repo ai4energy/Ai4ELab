@@ -64,7 +64,7 @@ end
 ### 生成页面函数——UI
 
 ```julia
-function ui(model::MyPage)
+function ui(model::MyApp.MyPage)
 
     onany(model.value) do (_...)
         model.click[] += 1
@@ -214,7 +214,7 @@ pd(f, para, xlim, name) = PlotData(
     plot=StipplePlotly.Charts.PLOT_TYPE_SCATTER,
     name=name,
 )
-function compute_data(ic_model::MyPage)
+function compute_data(ic_model::MyApp.MyPage)
     f_left = isequal(ic_model.f_left[], nothing) ? sin : eval(ic_model.f_left[])
     f_right = isequal(ic_model.f_right[], nothing) ? sin : eval(ic_model.f_right[])
     xlim = ic_model.x_limit[]
