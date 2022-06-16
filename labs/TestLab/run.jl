@@ -1,13 +1,16 @@
-for file in readdir("./lib")
-    include("lib/" * file)
-end
-
-route("/") do
-    MyApp.htmlfile
-end
+using Pkg
+Pkg.activate(".")
+Pkg.instantiate()
 
 try
     if isDeploy
+
+        include("lib/MyApp.jl")
+
+        route("/") do
+            MyApp.MyPage |> init |> ui |> html
+        end
+
         function force_compile()
             sleep(5)
             for (name, r) in Router.named_routes()
@@ -19,6 +22,14 @@ try
         up(8000, "0.0.0.0", async=false)
     end
 catch e
+    using Revise
+
+    includet("lib/MyApp.jl")
+
+    route("/") do
+        MyApp.MyPage |> init |> ui |> html
+    end
+
     up()
 end
 

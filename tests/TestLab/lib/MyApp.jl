@@ -1,8 +1,8 @@
 using Stipple, StipplePlotly, StippleUI
 
+module MyApp
+using Stipple,StipplePlotly, StippleUI, DataFrames
 @reactive mutable struct MyPage <: ReactiveModel
-    # iris_data::R{DataTable} = DataTable(data)
-
     value::R{Int} = 0
     click::R{Int} = 0
 
@@ -15,6 +15,8 @@ using Stipple, StipplePlotly, StippleUI
 
     x_limit::R{Int} = 3
     paramenter::R{Float32} = 1.2
+
+end
 end
 
 
@@ -26,7 +28,7 @@ pd(f, para, xlim, name) = PlotData(
 )
 
 
-function compute_data(ic_model::MyPage)
+function compute_data(ic_model::MyApp.MyPage)
     f_left = isequal(ic_model.f_left[], nothing) ? sin : eval(ic_model.f_left[])
     f_right = isequal(ic_model.f_right[], nothing) ? sin : eval(ic_model.f_right[])
     xlim = ic_model.x_limit[]
@@ -38,8 +40,7 @@ function compute_data(ic_model::MyPage)
     nothing
 end
 
-
-function ui(model::MyPage)
+function ui(model::MyApp.MyPage)
 
     onany(model.value) do (_...)
         model.click[] += 1
