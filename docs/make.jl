@@ -13,7 +13,8 @@ makedocs(
         ],
         "Apps" => [
             "labs/TestLab.md",
-            "labs/HeatLab.md"
+            "labs/HeatLab.md",
+            "labs/PVLab.md",
         ]
     ],
     
