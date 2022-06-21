@@ -8,13 +8,13 @@
 1. 建立Julia环境的方法是创建`Project.toml`文件
 2. 把Julia环境切换到当前文件夹，即
 
-    ```julia
-    TestLab> julia #进入Julia
-    julia> #按下 ] 键进入包模式
-    (@v1.x) pkg> activate .
-    ```
+ ```julia
+ TestLab> julia #进入Julia
+ julia> #按下 ] 键进入包模式
+ (@v1.x) pkg> activate .
+ ```
 
-    **或者按照[Quick Start中的方法2](./quickstart.md#方法2)，直接通过VScode运行也可以。**
+**或者按照[Quick Start中的方法2](./quickstart.md#方法2)，直接通过VScode运行也可以。**
 3. 若要添加依赖包，使用`add`，那么在`Project.toml`文件中自动生成`[deps]`。所以这个文件中的`[deps]`，不用自己写。
 4. `instantiate`实际上就是根据`Project.toml`的内容把相应的包拉取到当前环境。`Manifest.toml`是在实例化环境时生成的。[Quick Start中的方法2](./quickstart.md#方法2)把上述过程写在了Julia脚本中，自动完成。
 
