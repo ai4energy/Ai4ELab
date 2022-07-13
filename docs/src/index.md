@@ -5,7 +5,9 @@
 !!! tip
     [Click To *Introduction to smart energy system*](https://ai4energy.github.io/enpo811203/)
 
-    [Click To Ai4EDocs](https://ai4energy.github.io/Ai4EDocs/dev/)
+    * [OptControl.jl](https://ai4energy.github.io/OptControl.jl/dev/)
+    * [Ai4EDocs](https://ai4energy.github.io/Ai4ELab/dev/)
+    * [Ai4EComponentLib.jl](https://ai4energy.github.io/Ai4EComponentLib.jl/dev/)
 
 ## Introduction of Ai4ELab
 
