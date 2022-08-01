@@ -9,6 +9,8 @@ using Stipple,StipplePlotly, StippleUI, DataFrames
     tableData::R{DataTable} = DataTable(DataFrame(1000 * ones(10, 10), ["$i" for i in 1:10]))
     credit_data_pagination::DataTablePagination = DataTablePagination(rows_per_page=10)
 
+
+    
     value::R{Int} = 0
     click::R{Int} = 0
 

@@ -5,7 +5,7 @@
 
     Email:522432938@qq.com
 
-    [云实验室网页链接](http://121.40.92.145:8000/)
+    [云实验室网页链接](https://ai4energy-testlab.herokuapp.com/)。PS: 首次进入需要等待较长时间，Heroku上的App需要重启。
 
     如有错误，请批评指正。欢迎讨论交流。
 

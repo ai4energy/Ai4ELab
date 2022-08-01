@@ -5,8 +5,8 @@
 !!! warning
     开发环境可以建立在`tests/`或其他文件夹中。尝试`labs/`中例子也不要对里面的项目直接修改。最好把它复制出来，`tests/`或其他文件夹中。规避无法撤回的风险。
 
-1. 建立Julia环境的方法是创建`Project.toml`文件
-2. 把Julia环境切换到当前文件夹，即
+* 建立Julia环境的方法是创建`Project.toml`文件
+* 把Julia环境切换到当前文件夹，即
 
 ```julia
 TestLab> julia #进入Julia
@@ -16,8 +16,8 @@ julia> #按下 ] 键进入包模式
 
 **或者按照[Quick Start中的方法2](./quickstart.md#方法2)，直接通过VScode运行也可以。**
 
-3. 若要添加依赖包，使用`add`，那么在`Project.toml`文件中自动生成`[deps]`。所以这个文件中的`[deps]`，不用自己写。
-4. 按下面的方式使用`instantiate`，`instantiate`实际上就是根据`Project.toml`的内容把相应的包拉取到当前环境。`Manifest.toml`是在实例化环境时生成的。[Quick Start中的方法2](./quickstart.md#方法2)把上述过程写在了Julia脚本中，自动完成。
+* 若要添加依赖包，使用`add`，那么在`Project.toml`文件中自动生成`[deps]`。所以这个文件中的`[deps]`，不用自己写。
+* 按下面的方式使用`instantiate`，`instantiate`实际上就是根据`Project.toml`的内容把相应的包拉取到当前环境。`Manifest.toml`是在实例化环境时生成的。[Quick Start中的方法2](./quickstart.md#方法2)把上述过程写在了Julia脚本中，自动完成。
 
 ```julia
 (TestLab) pkg> instantiate
