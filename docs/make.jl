@@ -15,6 +15,7 @@ makedocs(
             "labs/TestLab.md",
             "labs/HeatLab.md",
             "labs/PVLab.md",
+            "labs/RobotControlLab.md",
         ]
     ],
     
