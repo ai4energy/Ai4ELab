@@ -1,6 +1,6 @@
 # Introduction
 
-Ai4ELab is a *Virtual Simulation Lab* of Ai4Energy。it's：
+Ai4ELab is a *Virtual Simulation Lab* of Ai4Energy. it's：
 
 * Based on framework of [Geine.jl and Stipple.jl](https://www.genieframework.com/)
 * Supported by [Ecosystem of SciML](https://sciml.ai/) and other powerful Julia packages.
