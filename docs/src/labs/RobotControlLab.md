@@ -5,7 +5,7 @@
 
     Email:522432938@qq.com
 
-    [云实验室网页链接](https://ai4energy-robotcontrollab.herokuapp.com/)。PS: 首次进入需要等待较长时间，Heroku上的App需要重启。
+    [云实验室网页链接](https://ai4energy-robotcontrollab.herokuapp.com/)。PS: 首次进入需要等待较长时间，Heroku上的App需要重启。在启动时，会网页报错，稍等一会后刷新即可（调用库太多，启动稍慢，被认为没有响应）。
 
     如有错误，请批评指正。欢迎讨论交流。
 
