@@ -1,4 +1,5 @@
 {
+  "description": "APPs: ",
   "order": [
     "TestApp",
     "CommonApp"
