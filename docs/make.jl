@@ -1,7 +1,9 @@
-using Documenter
+using Documenter, DemoCards, JSON
 
-format = Documenter.HTML(assets = ["assets/css/ai4e.css"])
-
+apps, postprocess_cb, apps_assets = makedemos("apps")
+assets = collect(filter(x -> !isnothing(x), Set([apps_assets])))
+push!(assets, "assets/css/ai4e.css")
+format = Documenter.HTML(assets=assets)
 makedocs(
     sitename="Ai4ELab",
     pages=[
@@ -11,19 +13,20 @@ makedocs(
             "tutorials/webdesign.md",
             "tutorials/styleAndRules.md"
         ],
-        "Apps" => [
-            "labs/TestLab.md",
-            "labs/HeatLab.md",
-            "labs/PVLab.md",
-            "labs/RobotControlLab.md",
-        ]
-    ],
-    
-    format=format,
+        apps,
+        # "Aapps" => [
+        #     "labs/TestLab.md",
+        #     "labs/HeatLab.md",
+        #     "labs/PVLab.md",
+        #     "labs/RobotControlLab.md",
+        # ]
+    ], format=format,
 )
 
+postprocess_cb()
+
 deploydocs(
-   repo="https://github.com/ai4energy/Ai4ELab.git";
-   push_preview=true
-#    target = "../build",
+    repo="https://github.com/ai4energy/Ai4ELab.git";
+    #    push_preview=true
+    #    target = "../build",
 )
