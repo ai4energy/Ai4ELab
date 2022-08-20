@@ -3,6 +3,7 @@
   "order": [
     "HeatLab.md",
     "PVLab.md",
-    "RobotControlLab.md"
+    "RobotControlLab.md",
+    "PlotLab.md"
   ]
 }
