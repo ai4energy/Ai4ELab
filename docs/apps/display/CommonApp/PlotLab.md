@@ -7,7 +7,7 @@
 
     Email: 522432938@qq.com
 
-    [云实验室网页链接](https://ai4energy-pvlab.herokuapp.com/)。PS: 首次进入需要等待较长时间，Heroku上的App需要重启。
+    [云实验室网页链接](https://ai4energy-plotlab.herokuapp.com/)。PS: 首次进入需要等待较长时间，Heroku上的App需要重启。
 
     APP为参加软件设计（中国石油集团测井）比赛而设计
 
