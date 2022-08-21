@@ -6,6 +6,7 @@
 * HeatLab
 * PVLab
 * RobotControlLab
+* PlotLab
 
 点击下面相关卡片查看云实验室详细信息。
 
