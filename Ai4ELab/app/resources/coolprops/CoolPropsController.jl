@@ -6,6 +6,9 @@ using CoolProp
     <h1>coolprop test</h1>
     "
   end
+  function addxy(x,y)
+    x+y    
+  end
   
 
 end
