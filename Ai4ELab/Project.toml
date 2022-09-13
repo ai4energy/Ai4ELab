@@ -1,0 +1,14 @@
+name = "Ai4ELab"
+uuid = "669caa34-14bb-486a-86a7-755d7998b4da"
+authors = ["Mingtao Li <mingtao@xjtu.edu.cn>"]
+version = "0.1.0"
+
+[deps]
+CoolProp = "e084ae63-2819-5025-826e-f8e611a84251"
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+Genie = "c43c736e-a2d1-11e8-161f-af95117fbd1e"
+GenieDeployDocker = "a082159f-dd50-4f6d-a3c5-00c38fd36577"
+Inflector = "6d011eab-0732-4556-8808-e463c76bf3b6"
+Logging = "56ddb016-857b-54e1-b83d-db4d58db5568"
+SearchLight = "340e8cb6-72eb-11e8-37ce-c97ebeb32050"
+SearchLightSQLite = "21a827c4-482a-11ea-3a19-4d2243a4a2c5"
