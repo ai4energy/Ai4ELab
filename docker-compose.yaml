@@ -1,0 +1,9 @@
+version: "3"
+services:
+  Ai4ELab:
+    image: Ai4ELab
+    container_name: Ai4ELab
+    command: bin/server
+
+    ports:
+      - 8000:8000
