@@ -28,6 +28,7 @@ EXPOSE 8000
 
 # set up app environment
 ENV JULIA_DEPOT_PATH "/home/genie/.julia"
+ENV JULIA_PKG_SERVER "https://mirrors.bfsu.edu.cn/julia"
 ENV GENIE_ENV "dev"
 ENV GENIE_HOST "0.0.0.0"
 ENV PORT "8000"
