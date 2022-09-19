@@ -1,0 +1,3 @@
+[submodule "Ai4ELab-web"]
+	path = Ai4ELab-web
+	url = git@github.com:ai4energy/Ai4ELab-web.git
