@@ -13,4 +13,4 @@
 
 ## 实验演示
 
-![图一](./assets/robot.gif)
+![图一](./assets/二维平板.gif)
